@@ -42,7 +42,7 @@ A modern, full-stack help desk solution built with **Next.js** (frontend) and **
 
 ## 📁 Repository Structure
 
-\`\`\`
+```
 QuickDesk/
 ├── Server/                     # Backend (Flask API)
 │   ├── api.py                 # Main Flask application
@@ -60,7 +60,7 @@ QuickDesk/
     ├── package.json          # Node.js dependencies
     ├── next.config.js        # Next.js configuration
     └── README.md             # Frontend documentation
-\`\`\`
+```
 
 ## 🛠️ Technology Stack
 
@@ -87,13 +87,13 @@ QuickDesk/
 - Git
 
 ### **1. Clone the Repository**
-\`\`\`bash
+```
 git clone https://github.com/Aviralansh/QuickDesk-BigO.git
 cd QuickDesk-BigO
-\`\`\`
+```
 
 ### **2. Backend Setup**
-\`\`\`bash
+```
 cd Server
 
 # Create virtual environment
@@ -108,12 +108,12 @@ python database.py
 
 # Start the server
 python api.py
-\`\`\`
+```
 
 The backend will be available at `http://localhost:5000`
 
 ### **3. Frontend Setup**
-\`\`\`bash
+```
 cd "QuickDesk @BigO"
 
 # Install dependencies
@@ -124,7 +124,7 @@ echo "NEXT_PUBLIC_API_URL=http://localhost:5000/api" > .env.local
 
 # Start development server
 npm run dev
-\`\`\`
+```
 
 The frontend will be available at `http://localhost:3000`
 
@@ -145,15 +145,15 @@ The frontend will be available at `http://localhost:3000`
 
 #### **Frontend Configuration**
 Update your frontend environment:
-\`\`\`bash
+```
 # In QuickDesk @BigO/.env.local
 NEXT_PUBLIC_API_URL=https://aviralansh-quickdesk.hf.space/api
-\`\`\`
+```
 
 ### **Option 2: Vercel (Recommended for Frontend)**
 
 #### **Frontend Deployment**
-\`\`\`bash
+```bash
 cd "QuickDesk @BigO"
 
 # Install Vercel CLI
@@ -164,12 +164,12 @@ vercel
 
 # Set environment variable
 vercel env add NEXT_PUBLIC_API_URL
-\`\`\`
+```
 
 ### **Option 3: Docker Deployment**
 
 #### **Backend with Docker**
-\`\`\`bash
+```bash
 cd Server
 
 # Build image
@@ -177,10 +177,10 @@ docker build -t quickdesk-backend .
 
 # Run container
 docker run -p 5000:7860 -e DATABASE_URL=sqlite:///quickdesk.db quickdesk-backend
-\`\`\`
+```
 
 #### **Frontend with Docker**
-\`\`\`bash
+```bash
 cd "QuickDesk @BigO"
 
 # Create Dockerfile
@@ -199,12 +199,12 @@ EOF
 docker build -t quickdesk-frontend .
 docker run -p 3000:3000 -e NEXT_PUBLIC_API_URL=http://your-backend-url/api 
 QuickDesk-frontend
-\`\`\`
+```
 
 ### **Option 4: Traditional VPS/Server**
 
 #### **Backend Setup**
-\`\`\`bash
+```bash
 # Install Python and dependencies
 sudo apt update
 sudo apt install python3 python3-pip python3-venv nginx
@@ -219,10 +219,10 @@ pip install gunicorn
 
 # Run with Gunicorn
 gunicorn --bind 0.0.0.0:5000 api:app
-\`\`\`
+```
 
 #### **Frontend Setup**
-\`\`\`bash
+```bash
 # Install Node.js
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -235,28 +235,28 @@ npm run build
 # Serve with PM2
 npm install -g pm2
 pm2 start npm --name "quickdesk-frontend" -- start
-\`\`\`
+```
 
 ## ⚙️ Configuration
 
 ### **Environment Variables**
 
 #### **Backend (Server/.env)**
-\`\`\`env
+```env
 DATABASE_URL=sqlite:///quickdesk.db
 SECRET_KEY=your-super-secret-key-change-in-production
 DEBUG=False
 EMAIL_ENABLED=False
 UPLOAD_FOLDER=uploads
 MAX_FILE_SIZE=10485760
-\`\`\`
+```
 
 #### **Frontend (QuickDesk @BigO/.env.local)**
-\`\`\`env
+```env
 NEXT_PUBLIC_API_URL=https://aviralansh-quickdesk.hf.space/api
 NEXT_PUBLIC_APP_NAME=QuickDesk
 NEXT_PUBLIC_VERSION=1.0.0
-\`\`\`
+```
 
 ### **Database Configuration**
 
@@ -264,19 +264,19 @@ NEXT_PUBLIC_VERSION=1.0.0
 No additional setup required. Database file will be created automatically.
 
 #### **PostgreSQL**
-\`\`\`env
+```env
 DATABASE_URL=postgresql://username:password@localhost:5432/quickdesk
-\`\`\`
+```
 
 #### **MySQL**
-\`\`\`env
+```env
 DATABASE_URL=mysql://username:password@localhost:3306/quickdesk
-\`\`\`
+```
 
 ## 🔧 Development
 
 ### **Backend Development**
-\`\`\`bash
+```bash
 cd Server
 
 # Install development dependencies
@@ -288,10 +288,10 @@ python api.py
 
 # Run tests (if available)
 python -m pytest
-\`\`\`
+```
 
 ### **Frontend Development**
-\`\`\`bash
+```bash
 cd "QuickDesk @BigO"
 
 # Install dependencies
@@ -305,7 +305,7 @@ npm run lint
 
 # Build for production
 npm run build
-\`\`\`
+```
 
 ## 📚 API Documentation
 
@@ -388,5 +388,5 @@ If you encounter any issues or have questions:
 
 
 ⭐ **Star this repository if you find it helpful!**
-\`\`\`
+```
 
