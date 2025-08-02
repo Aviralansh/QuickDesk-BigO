@@ -1,4 +1,4 @@
-# QuickDesk - Complete Help Desk System
+# [QuickDesk - Complete Help Desk System](https://quickdesk-two.vercel.app/)
 
 A modern, full-stack help desk solution built with **Next.js** (frontend) and **Flask** (backend). QuickDesk provides role-based ticket management, real-time notifications, and a comprehensive admin panel.
 
